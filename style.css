@@ -408,8 +408,14 @@ main {
   width: 100%;
   aspect-ratio: 16/9;
   margin: 2.5rem 0;
-  object-fit: cover;
   border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.detail-screenshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -420,11 +426,16 @@ main {
   margin: 2.5rem 0;
 }
 
-.detail-screenshots-pair img {
-  width: 100%;
+.detail-screenshots-pair .img-wrap {
   aspect-ratio: 16/9;
-  object-fit: cover;
   border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.detail-screenshots-pair .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -435,11 +446,16 @@ main {
   margin: 2.5rem 0;
 }
 
-.detail-screenshots-trio img {
-  width: 100%;
+.detail-screenshots-trio .img-wrap {
   aspect-ratio: 16/9;
-  object-fit: cover;
   border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.detail-screenshots-trio .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
