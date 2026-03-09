@@ -428,10 +428,11 @@ main {
   margin-bottom: 1.5rem;
 }
 
-.detail-intro p {
+.detail-intro-text {
   font-size: 1.05rem;
   color: var(--text-muted);
   line-height: 1.8;
+  margin-bottom: 0;
 }
 
 .detail-screenshot {
@@ -450,12 +451,11 @@ main {
   margin: 0 auto;
 }
 
-.detail-intro {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  align-items: start;
-  margin-bottom: 2rem;
+.detail-screenshot--float {
+  float: right;
+  margin: 0 0 1.5rem 2.5rem;
+  max-width: 45%;
+  width: auto;
 }
 
 .detail-screenshots-pair {
@@ -808,8 +808,10 @@ main {
    RESPONSIVE
 ================================================ */
 @media (max-width: 768px) {
-  .detail-intro {
-    grid-template-columns: 1fr;
+  .detail-screenshot--float {
+    float: none;
+    max-width: 100%;
+    margin: 1.5rem 0;
   }
 
   .nav-toggle {
