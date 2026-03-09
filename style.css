@@ -368,7 +368,7 @@ main {
 }
 
 .card-thumb {
-  aspect-ratio: 16/9;
+  aspect-ratio: 4/3;
   background: var(--bg-alt);
   border-bottom: 1px solid var(--border);
   display: flex;
