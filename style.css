@@ -436,7 +436,7 @@ main {
   margin-bottom: 2rem;
 }
 
-.detail-intro p {
+.detail-intro-body > p {
   font-size: 1.05rem;
   color: var(--text-muted);
   line-height: 1.8;
@@ -824,7 +824,7 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .detail-intro p {
+  .detail-intro-body {
     order: 1;
   }
 
