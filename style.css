@@ -438,7 +438,6 @@ main {
 
 .detail-screenshot {
   width: 100%;
-  aspect-ratio: 16/9;
   margin: 2.5rem 0;
   border-radius: var(--radius);
   overflow: hidden;
@@ -446,8 +445,7 @@ main {
 
 .detail-screenshot img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
@@ -459,15 +457,13 @@ main {
 }
 
 .detail-screenshots-pair .img-wrap {
-  aspect-ratio: 16/9;
   border-radius: var(--radius);
   overflow: hidden;
 }
 
 .detail-screenshots-pair .img-wrap img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
@@ -479,15 +475,13 @@ main {
 }
 
 .detail-screenshots-trio .img-wrap {
-  aspect-ratio: 16/9;
   border-radius: var(--radius);
   overflow: hidden;
 }
 
 .detail-screenshots-trio .img-wrap img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
