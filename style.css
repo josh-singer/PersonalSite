@@ -264,13 +264,11 @@ main {
 ================================================ */
 .home-hero {
   display: grid;
-  grid-template-columns: 1fr 240px;
+  grid-template-columns: 1fr;
   grid-template-areas:
-    "headline photo"
-    "body     photo";
-  column-gap: clamp(2.5rem, 6vw, 5rem);
-  row-gap: 0;
-  align-items: start;
+    "photo"
+    "headline"
+    "body";
 }
 
 .home-headline {
@@ -301,13 +299,18 @@ main {
 
 .home-photo-wrap {
   grid-area: photo;
-  border-radius: var(--radius);
+  width: 100%;
+  height: 420px;
   overflow: hidden;
+  border-radius: var(--radius);
+  margin-bottom: 2.5rem;
 }
 
 .home-photo {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
   display: block;
 }
 
@@ -838,7 +841,7 @@ main {
     display: none;
   }
 
-  /* Home — mobile: centered photo above stacked text */
+  /* Home — mobile */
   .home-hero {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -849,9 +852,19 @@ main {
   }
 
   .home-photo-wrap {
-    justify-self: center;
-    width: 180px;
-    aspect-ratio: 3/4;
+    width: 100%;
+    height: 260px;
+    aspect-ratio: unset;
+    justify-self: unset;
+    margin-bottom: 0;
+  }
+
+  .home-photo {
+    object-position: center 15%;
+  }
+
+  .home-headline {
+    margin-bottom: 0;
   }
 
   .home-photo {
