@@ -265,11 +265,16 @@ main {
 .home-hero {
   display: grid;
   grid-template-columns: 1fr 240px;
-  gap: clamp(2.5rem, 6vw, 5rem);
+  grid-template-areas:
+    "headline photo"
+    "body     photo";
+  column-gap: clamp(2.5rem, 6vw, 5rem);
+  row-gap: 0;
   align-items: start;
 }
 
 .home-headline {
+  grid-area: headline;
   font-size: clamp(2.25rem, 5vw, 3.25rem);
   line-height: 1.15;
   margin-bottom: 1.75rem;
@@ -277,6 +282,7 @@ main {
 }
 
 .home-body {
+  grid-area: body;
   font-size: 1.025rem;
   color: var(--text-muted);
   line-height: 1.8;
@@ -294,9 +300,9 @@ main {
 }
 
 .home-photo-wrap {
+  grid-area: photo;
   border-radius: var(--radius);
   overflow: hidden;
-  flex-shrink: 0;
 }
 
 .home-photo {
@@ -805,21 +811,28 @@ main {
     display: none;
   }
 
-  /* Home */
+  /* Home — medium: photo + headline on same row, body below */
   .home-hero {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: 160px 1fr;
+    grid-template-areas:
+      "photo headline"
+      "body  body";
+    column-gap: 1.5rem;
+    row-gap: 1.25rem;
   }
 
   .home-photo-wrap {
-    order: -1;
-    max-width: 220px;
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/4;
   }
 
   .home-photo {
     height: 100%;
     object-fit: cover;
+  }
+
+  .home-headline {
+    margin-bottom: 0;
+    align-self: center;
   }
 
   /* Portfolio */
@@ -848,6 +861,24 @@ main {
 @media (max-width: 480px) {
   main {
     padding: 2rem 0 3rem;
+  }
+
+  /* Home — narrow: fully stacked with full-width photo */
+  .home-hero {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "photo"
+      "headline"
+      "body";
+    gap: 1.25rem;
+  }
+
+  .home-photo-wrap {
+    aspect-ratio: 16/9;
+  }
+
+  .home-headline {
+    margin-bottom: 0;
   }
 
   .detail-screenshot {
