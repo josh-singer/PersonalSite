@@ -863,7 +863,7 @@ main {
     padding: 2rem 0 3rem;
   }
 
-  /* Home — narrow: fully stacked with full-width photo */
+  /* Home — narrow: centered photo above stacked text */
   .home-hero {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -874,7 +874,9 @@ main {
   }
 
   .home-photo-wrap {
-    aspect-ratio: 16/9;
+    justify-self: center;
+    width: 180px;
+    aspect-ratio: 3/4;
   }
 
   .home-headline {
